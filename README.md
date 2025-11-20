@@ -132,30 +132,27 @@ public class CheckinResponse
 
 ## 1️⃣ Clone o repositório
 ```
-bashgit clone https://github.com/SEU_USUARIO/FlowMind.git
+git clone https://github.com/SEU_USUARIO/FlowMind.git
 cd FlowMind
 ```
 
 ## 2️⃣ Restaure dependências
 ```
-bashdotnet restore
+dotnet restore
 ```
 
 ## 3️⃣ **Configure o banco de dados**
    - Atualize a string de conexão em `appsettings.json`
-   - Execute as migrações:
-     ```bash
-     dotnet ef database update
-     ```
+
 
 ## 4️⃣ Execute as migrations
 ```
-bashdotnet ef database update --project Flowmind
+dotnet ef database update
 ```
 
 ## 5️⃣ Execute a API
 ```
-bashdotnet run --project Flowmind
+dotnet run
 ```
 
 ## 6️⃣ Acesse o Swagger
