@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("Flowmind")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+db9b42d22cd1093e58e0de237b40e996bc70a9bd")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+79e2962acc72b5fdb425bfa7782b6fa5d711423b")]
 [assembly: System.Reflection.AssemblyProductAttribute("Flowmind")]
 [assembly: System.Reflection.AssemblyTitleAttribute("Flowmind")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

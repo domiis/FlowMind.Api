@@ -1,9 +1,9 @@
-# FlowMind .NET  
+# 🌿 FlowMind .NET  
 **Backend da plataforma FlowMind — monitoramento de equilíbrio mental e bem-estar diário**
 
 ---
 
-# Integrantes  
+# 👥 Integrantes  
 | Nomes | RM |
 |------|----|
 | Sofia Domingues Gonçalves | 554920 |
@@ -11,7 +11,7 @@
 
 ---
 
-# Sobre o Projeto  
+# 🚀 Sobre o Projeto  
 O **FlowMind Backend** é uma API RESTful para registro diário de **humor, energia e sono**, com cálculo de **índice de equilíbrio** e suporte a **duas versões da API**:
 
 - **v1**: Persistência real com **Oracle + Entity Framework Core**  
@@ -21,7 +21,7 @@ A plataforma permite que usuários façam **check-ins diários** e monitorem seu
 
 ---
 
-# Funcionalidades  
+# ✨ Funcionalidades  
 
 - **Check-in diário** com humor, energia e sono  
 - **Cálculo do Índice de Equilíbrio** (0 a 100)  
@@ -34,7 +34,7 @@ A plataforma permite que usuários façam **check-ins diários** e monitorem seu
 
 ---
 
-# Estrutura do Projeto  
+# 🗂️ Estrutura do Projeto  
 
 ```FlowMind/
 ├── Flowmind/                 
@@ -47,10 +47,10 @@ A plataforma permite que usuários façam **check-ins diários** e monitorem seu
 
 ---
 
-# Rotas da API  
+# 🔗 Rotas da API  
 
-### Versão 1.0 — Banco Real (Oracle)  
-> Base URL: `/api/users/{idUsuario}/checkins`
+### 🔵 Versão 1.0 — Banco Real (Oracle)  
+> 📌 Base URL: `/api/users/{idUsuario}/checkins`
 
 | Método | Rota | Descrição | Corpo da Requisição | Resposta Esperada |
 |--------|------|-----------|----------------------|-------------------|
@@ -62,8 +62,8 @@ A plataforma permite que usuários façam **check-ins diários** e monitorem seu
 
 ---
 
-### Versão 2.0 — In-Memory + HATEOAS + Índice  
-> Base URL: `/api/v2/checkin`
+### 🟣 Versão 2.0 — In-Memory + HATEOAS + Índice  
+> 📌 Base URL: `/api/v2/checkin`
 
 | Método | Rota | Descrição | Corpo da Requisição | Resposta Esperada |
 |--------|------|-----------|----------------------|-------------------|
@@ -75,9 +75,9 @@ A plataforma permite que usuários façam **check-ins diários** e monitorem seu
 
 ---
 
-# Entidades e DTOs  
+# 🧬 Entidades e DTOs  
 
-### `CheckinDiario` (Entidade)  
+### 📘 `CheckinDiario` (Entidade)  
 ```
 public class CheckinDiario
 {
@@ -90,13 +90,13 @@ public class CheckinDiario
 }
 ```
 
-### Enums
+### 🔤 Enums
 ``` 
 public enum Humor { Ansioso, Neutro, Motivado, Estressado, Calmo }
 public enum Energia { Baixa, Media, Alta }
 public enum Sono { Ruim, Ok, Bom }
 ```
-## CheckinResponse (DTO)
+## 📦 CheckinResponse (DTO)
 
 ```
 public class CheckinResponse
@@ -111,7 +111,7 @@ public class CheckinResponse
 ```
 
 
-# Tecnologias Utilizadas
+# 🛠️ Tecnologias Utilizadas
 
 
 | Tecnologia | Finalidade | 
@@ -128,20 +128,20 @@ public class CheckinResponse
 
 
 
-# Como Rodar o Projeto
+# ▶️ Como Rodar o Projeto
 
-## 1. Clone o repositório
+## 1️⃣ Clone o repositório
 ```
 bashgit clone https://github.com/SEU_USUARIO/FlowMind.git
 cd FlowMind
 ```
 
-## 2. Restaure dependências
+## 2️⃣ Restaure dependências
 ```
 bashdotnet restore
 ```
 
-## 3. Configure o Oracle
+## 3️⃣ Configure o Oracle
 ```
 Use user-secrets ou variável de ambiente (nunca commite senhas!)
 bash# PowerShell
@@ -152,37 +152,37 @@ dotnet user-secrets init
 dotnet user-secrets set "ConnectionStrings:OracleConnection" "Data Source=...;User Id=RM554920;Password=..."
 ```
 
-## 4. Execute as migrations
+## 4️⃣ Execute as migrations
 ```
 bashdotnet ef database update --project Flowmind
 ```
 
-## 5. Execute a API
+## 5️⃣ Execute a API
 ```
 bashdotnet run --project Flowmind
 ```
 
-## 6. Acesse o Swagger
+## 6️⃣ Acesse o Swagger
 ```
 v1: https://localhost:5001/swagger/v1/swagger.json
 v2: https://localhost:5001/swagger/v2/swagger.json
 ```
-# Monitoramento
-## Health Check
+# 🩺 Monitoramento
+## ❤️ Health Check
 ```
 GET /health
 ```
 - Retorna 200 OK se Oracle estiver saudável
-## Logging
+## 📝 Logging
 
 - Console + Debug (desenvolvimento)
 
-## Tracing
+## 🔍 Tracing
 
 - OpenTelemetry com exportador para console
 
 
-# Testes Automatizados
+# 🧪 Testes Automatizados
 ```
 cd Flowmind.Tests
 dotnet test
@@ -200,7 +200,7 @@ Total tests: 3
 - POST: Status 201 Created + Location header
 
 ---
-# Versionamento da API
+# 🧭 Versionamento da API
 
 | Versão | Rota Base                  | Banco      | Recursos                              |
 |--------|----------------------------|------------|---------------------------------------|
