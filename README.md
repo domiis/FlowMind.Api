@@ -141,16 +141,12 @@ cd FlowMind
 bashdotnet restore
 ```
 
-## 3️⃣ Configure o Oracle
-```
-Use user-secrets ou variável de ambiente (nunca commite senhas!)
-bash# PowerShell
-setx ConnectionStrings__OracleConnection "Data Source=(DESCRIPTION=(ADDRESS=(PROTOCOL=TCP)(HOST=oracle.fiap.com.br)(PORT=1521))(CONNECT_DATA=(SERVICE_NAME=ORCL)));User Id=RM554920;Password=SUA_SENHA"
-
-# Ou com user-secrets
-dotnet user-secrets init
-dotnet user-secrets set "ConnectionStrings:OracleConnection" "Data Source=...;User Id=RM554920;Password=..."
-```
+## 3️⃣ **Configure o banco de dados**
+   - Atualize a string de conexão em `appsettings.json`
+   - Execute as migrações:
+     ```bash
+     dotnet ef database update
+     ```
 
 ## 4️⃣ Execute as migrations
 ```
